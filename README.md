@@ -1,47 +1,40 @@
 # What are you pointing at ??
 
-This repository contains analytics-ready data for EMG (Electromyography) signal gesture recognition. The dataset includes raw EMG data collected from 36 subjects using a MYO Thalmic bracelet while performing various hand gestures. The dataset is intended to facilitate research and experimentation in the field of gesture recognition and classification.
+# EMG Signal Gesture Recognition
+
+This repository contains code and resources for conducting gesture recognition using EMG (Electromyography) signal data. The dataset used in this project can be found on Kaggle [here](https://www.kaggle.com/datasets/sojanprajapati/emg-signal-for-gesture-recognition).
 
 ## About the Dataset
 
-### Context
-If you're new to gesture recognition and classification, acquiring raw data and formatting it appropriately can be challenging. This dataset aims to alleviate that challenge by providing analytics-ready data for experimentation. Contributors are encouraged to explore creative approaches and share their findings through kernels and analyses.
+The dataset consists of raw EMG data recorded from individuals wearing a MYO Thalmic bracelet on their forearm while performing various hand gestures. Each gesture is labeled with a specific category, and the dataset includes information such as time stamps and channel readings from the sensors on the bracelet.
 
-### Content
-The dataset consists of raw EMG data recorded for 36 subjects performing static hand gestures. Each subject performed two series of gestures, each containing six to seven basic gestures. The data includes the following columns:
+## Work Conducted
 
-1. **Time**: Time in milliseconds.
-2-9. **Channel**: Eight EMG channels from the MYO Thalmic bracelet.
-10. **Class**: Labels for gestures, with the following mappings:
-   - 0: Unmarked data
-   - 1: Hand at rest
-   - 2: Hand clenched in a fist
-   - 3: Wrist flexion
-   - 4: Wrist extension
-   - 5: Radial deviations
-   - 6: Ulnar deviations
-   - 7: Extended palm (not performed by all subjects)
-11. **Label**: Subject identifier (1 to 36), indicating the performer of the experiment.
+In this project, we conducted the following steps to preprocess the data and classify the gestures:
 
-For more detailed information, refer to the [Readme file](https://archive.ics.uci.edu/ml/datasets/EMG+data+for+gestures) of the original dataset.
+1. **Data Preprocessing**:
+   - Cleaned the dataset to handle any missing or erroneous data points.
+   - Applied sliding window Fourier transform to segment the EMG signals into smaller windows, which helps capture temporal patterns in the data.
+   - Extracted features from the Fourier transformed signals to reduce dimensionality and focus on relevant information for classification.
 
-### Acknowledgements
-We extend our gratitude to the UCI Machine Learning Repository and the researchers who made this open data available for exploration and research.
+2. **Model Selection**:
+   - Experimented with various deep learning models suitable for time-series data classification, including:
+     - AlexNet
+     - ResNet18
+     - VGG16
+     - VGG19
+   - Chose models with architectures capable of handling 1D input data while maintaining the convolutional and pooling layers for feature extraction.
 
-## Sliding Window Fourier Transform and Model Implementation
-
-To implement sliding window Fourier transform and utilize different deep learning models such as AlexNet, ResNet18, VGG16, VGG19, etc., we can follow these steps:
-
-1. **Preprocess Data**: Prepare the dataset by applying sliding window Fourier transform to convert the raw EMG signals into a format suitable for input to deep learning models.
-   
-2. **Model Modification**: Modify the CNN and max-pooling layers of the chosen models to accommodate 1D input instead of 2D while keeping the rest of the architecture unchanged.
-
-3. **Training**: Train the modified models on the preprocessed EMG data for gesture recognition tasks.
-
-4. **Evaluation**: Evaluate the performance of the trained models using appropriate metrics and compare their effectiveness in gesture recognition.
+3. **Model Training and Evaluation**:
+   - Split the preprocessed data into training and testing sets.
+   - Trained each selected model on the training data using appropriate loss functions and optimization techniques.
+   - Evaluated the trained models on the test data to assess their performance in classifying different gesture categories.
+   - Utilized metrics such as accuracy, precision, recall, and F1-score to measure the classification performance of each model.
 
 ## Usage
 
+To replicate the experiments conducted in this project, follow these steps:
+
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/emg-signal-gesture-recognition.git
+   git clone https://github.com/your-username/emg-gesture-recognition.git
