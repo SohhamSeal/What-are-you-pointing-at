@@ -1,6 +1,6 @@
 # What are you pointing at ??
 
-# EMG Signal Gesture Recognition
+## EMG Signal Gesture Recognition
 
 This repository contains code and resources for conducting gesture recognition using EMG (Electromyography) signal data. The dataset used in this project can be found on Kaggle [here](https://www.kaggle.com/datasets/sojanprajapati/emg-signal-for-gesture-recognition).
 
