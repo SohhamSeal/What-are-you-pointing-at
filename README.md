@@ -21,20 +21,14 @@ In this project, we conducted the following steps to preprocess the data and cla
    - Experimented with various deep learning models suitable for time-series data classification, including:
      - AlexNet
      - ResNet18
-     - VGG16
-     - VGG19
+     - Resnet34
+     - VGGNET16
+     - ZFNET
+     - RCCGNET
    - Chose models with architectures capable of handling 1D input data while maintaining the convolutional and pooling layers for feature extraction.
 
 3. **Model Training and Evaluation**:
-   - Split the preprocessed data into training and testing sets.
+   - Split the preprocessed data into training and testing sets uisng k-fold Cross Validation.
    - Trained each selected model on the training data using appropriate loss functions and optimization techniques.
    - Evaluated the trained models on the test data to assess their performance in classifying different gesture categories.
-   - Utilized metrics such as accuracy, precision, recall, and F1-score to measure the classification performance of each model.
-
-## Usage
-
-To replicate the experiments conducted in this project, follow these steps:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/emg-gesture-recognition.git
+   - Utilized metrics such as accuracy, precision, recall and F1-score to measure the classification performance of each model.
