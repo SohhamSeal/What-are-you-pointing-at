@@ -27,8 +27,8 @@ In this project, we conducted the following steps to preprocess the data and cla
      - AlexNet
      - ResNet18
      - Resnet34
-     - VGGNET16
-     - ZFNET
+     - VGGNet16
+     - ZFNet
      - RCCGNET
    - Chose models with architectures capable of handling 1D input data while maintaining the convolutional and pooling layers for feature extraction.
 
