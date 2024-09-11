@@ -4,6 +4,11 @@
 
 This repository contains code and resources for conducting gesture recognition using EMG (Electromyography) signal data. The dataset used in this project can be found on Kaggle [here](https://www.kaggle.com/datasets/sojanprajapati/emg-signal-for-gesture-recognition).
 
+<table style="border: none;"><tr><td align="center">
+<img src="https://github.com/user-attachments/assets/afd2e731-c031-48b9-a662-8f96ee5cbf36" width="70%" />
+</td></tr></table>
+</center>
+
 ## About the Dataset
 
 The dataset consists of raw EMG data recorded from individuals wearing a MYO Thalmic bracelet on their forearm while performing various hand gestures. Each gesture is labeled with a specific category, and the dataset includes information such as time stamps and channel readings from the sensors on the bracelet.
